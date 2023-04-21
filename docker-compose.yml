@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  python:
+    build: .
+    volumes:
+      - ./workdir:/workdir
+    working_dir: /workdir
+    tty: true
+    
+    deploy:
+      resources:
+        reservations:
+          devices:
+           - driver: nvidia
+             capabilities: [utility, compute, video]
