@@ -1,10 +1,12 @@
-version: '3.8'
+version: "3"
 services:
-  python:
+  app:
     build: .
+    ports:
+      - 8888:8888
     volumes:
-      - ./workdir:/workdir
-    working_dir: /workdir
+      - ./app:/app
+    command: jupyter-notebook --port=8888 --ip=0.0.0.0 --allow-root --NotebookApp.token=''
     tty: true
     
     deploy:

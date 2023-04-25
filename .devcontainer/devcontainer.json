@@ -1,8 +1,0 @@
-{
-    "name": "python_app",
-    "dockerComposeFile": [
-        "../docker-compose.yml"
-    ],
-    "service": "python_app",
-    "workspaceFolder": "/workdir"
-}
