@@ -1,4 +1,7 @@
-FROM python:3.8.10
+FROM pytorch/pytorch
+
+#RUN apt-get update
+#RUN apt-get install -y python3 python3-pip
 
 ENV PYTHONIOENCODING utf-8
 ENV TZ="Asia/Tokyo"
